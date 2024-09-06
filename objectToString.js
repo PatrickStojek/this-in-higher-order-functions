@@ -42,8 +42,17 @@ const objectToArray = function(object, keyPropertyName = 'id') {
     return entries.map(entry => {
         const key = entry[0]
         const value = entry[1]
-        value[keyPropertyName] = key 
 
-        return value
+        if(typeof value === 'object') {
+            value[keyPropertyName] = key
+            return value
+        }
+        return {
+            [keyPropertyName]: key,
+            value: value
+        }
+        
+
+        
     })
 }
