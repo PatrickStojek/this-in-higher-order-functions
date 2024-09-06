@@ -25,6 +25,13 @@ const peopleObject = {
     '00003' : {name: 'Paweł', age: 29},
     '00004' : {name: 'Marcin', age: 41}
 }
+const peopleNames = {
+    '00001' : 'Ala', 
+    '00002' : 'Ola', 
+    '00003' : 'Paweł',
+    '00004' : 'Marcin'
+}
+
 
 const keys  = Object.keys(peopleObject)
 const values = Object.values(peopleObject)
