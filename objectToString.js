@@ -15,3 +15,28 @@ const objectToString = {
 }
 
 console.log(objectStringify.toString())
+
+
+///another implementation
+
+const peopleObject = {
+    '00001' : {name: 'Ala', age: 25},
+    '00002' : {name: 'Ola', age: 21},
+    '00003' : {name: 'Paweł', age: 29},
+    '00004' : {name: 'Marcin', age: 41}
+}
+
+const keys  = Object.keys(peopleObject)
+const values = Object.values(peopleObject)
+const entries = Object.entries(peopleObject)
+
+const objectToArray = function(object, keyPropertyName = 'id') {
+    const entries = Object.entries(object)
+    return entries.map(entry => {
+        const key = entry[0]
+        const value = entry[1]
+        value[keyPropertyName] = key 
+
+        return value
+    })
+}
