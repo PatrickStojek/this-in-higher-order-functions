@@ -38,7 +38,7 @@ const values = Object.values(peopleObject)
 const entries = Object.entries(peopleObject)
 
 const objectToArray = function(object, keyPropertyName = 'id') {
-    const entries = Object.entries(object)
+    const entries = Object.entries(object || {})
     return entries.map(entry => {
         const key = entry[0]
         const value = entry[1]
